@@ -229,7 +229,7 @@ if (!class_exists('ATAP_Class')) {
          * Auto Post Action
          * */
         function auto_post($new_status, $old_status, $post) {
-            if($new_status == 'publish'){
+            if($new_status == 'publish' && $old_status != 'publish'){
                 $auto_post = $_POST['atap_auto_post'];
                 if ($auto_post == 'yes' || $auto_post == '') {
                     include_once('api/codebird.php');  // twitter api library
