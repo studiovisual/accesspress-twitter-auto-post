@@ -26,7 +26,7 @@ if (in_array($post_type, $account_details['post_types']) && $category_flag) {
     foreach ($account_details as $key => $val) {
         $$key = $val; // converting each key into variable with its own value
     }
-    $post_title = $post->post_title;
+    $post_title = strip_tags($post->post_title);
     $post_content = strip_tags($post->post_content);
     $post_content = str_replace('&nbsp;','',$post_content);
     $post_content = strip_shortcodes($post_content);
