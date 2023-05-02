@@ -36,7 +36,7 @@ if (!class_exists('ATAP_Class')) {
             add_action('add_meta_boxes', array($this, 'add_atap_meta_box')); //adds plugin's meta box
             add_action('save_post', array($this, 'save_atap_meta_value')); //saves meta value
             add_action('future_to_publish', array($this, 'auto_post_schedule'));
-            add_action( 'transition_post_status',  array($this,'auto_post'), 10, 3 );
+            add_action( 'transition_post_status',  array($this,'auto_post'), 90, 3 );
             add_action( 'admin_init', array( $this, 'redirect_to_site' ), 1 );
             add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
             add_filter( 'admin_footer_text', array( $this, 'admin_footer_text' ) );
